@@ -2,7 +2,7 @@ import mehedi from '../assets/mehedi.webp';
 
 const Banner = () => {
   return (
-    <section className="bg-zinc-200 rounded-b-4xl py-20">
+    <section className="bg-zinc-200 rounded-b-[150px] py-20">
       <div className="container mx-auto grid grid-col-1 md:grid-cols-2 min-h-screen items-center lg:px-16 md:8 px-4 ">
         {/* Banner Content */}
         <div className="col-span-1 md:justify-self-center">
