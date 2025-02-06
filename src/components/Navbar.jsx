@@ -1,6 +1,5 @@
 import { FiDownload } from 'react-icons/fi';
 import logo from '../assets/logo.png';
-import { TbMenu } from 'react-icons/tb';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 
 const Navbar = () => {
@@ -21,7 +20,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-zinc-200">
       {/* Start */}
       <div className="navbar-start">
         <a className="w-12 hidden md:block">
