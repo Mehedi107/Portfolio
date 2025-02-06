@@ -55,11 +55,13 @@ const Navbar = () => {
         <a className="w-12  md:hidden">
           <img src={logo} alt="logo" />
         </a>
-        <ul className="md:flex hidden menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="md:flex hidden menu menu-horizontal px-1 text-lg">
+          {navLinks}
+        </ul>
       </div>
       {/* End */}
       <div className="navbar-end">
-        <a className="btn flex justify-center items-center bg-green-400">
+        <a className="btn md:btn-lg flex justify-center items-center bg-lime-400">
           <span>
             <FiDownload />
           </span>
