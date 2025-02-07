@@ -49,7 +49,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="project-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-zinc-300 "
+            className="project-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-zinc-200 "
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -60,14 +60,14 @@ export default function Projects() {
               alt={project.name}
               className="rounded-t-2xl w-full h-40 object-cover grayscale"
             />
-            <div className="p-6 bg-zinc-300">
+            <div className="p-6 bg-zinc-200">
               <h3 className="text-2xl font-semibold">{project.name}</h3>
               <p className=" my-2">{project.description}</p>
               <div className="flex flex-wrap gap-2 my-5">
                 {project.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-sm badge px-3 py-1 rounded-full"
+                    className="text-sm badge bg-zinc-300 border-none px-3 py-1 rounded-full"
                   >
                     {tech}
                   </span>

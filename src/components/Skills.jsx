@@ -53,7 +53,7 @@ export default function Skills() {
           {skills.map((category, index) => (
             <motion.div
               key={index}
-              className="p-4 md:p-6 bg-zinc-300 rounded-2xl shadow hover:scale-105 transition-transform duration-300"
+              className="p-4 md:p-6 bg-zinc-200 rounded-2xl shadow hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
