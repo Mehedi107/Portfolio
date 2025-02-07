@@ -1,9 +1,10 @@
-import { useParams } from 'react-router';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { Link, useParams } from 'react-router';
+import { FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import p1 from '../assets/artifact.png';
 import p2 from '../assets/vocabhero.png';
 import p3 from '../assets/prodvent.png';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 const projects = [
   {
@@ -11,30 +12,47 @@ const projects = [
     image: p3,
     description:
       'ProdVent is a web platform designed to showcase and discover the latest digital products, including web apps, AI tools, software, games, and mobile apps. Built using the MERN stack (MongoDB, Express.js, React, Node.js), ProdVent allows users to submit, explore, and engage with innovative products.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'TailwindCSS'],
-    liveLink: 'https://prodvent.live',
-    githubLink: 'https://github.com/yourusername/prodvent-client',
-    detailsPage: '/projects/prodvent',
+    techStack: ['tailwind', 'React', 'Node.js', 'MongoDB', 'TailwindCSS'],
+    liveLink: 'https://prodvent-5cd36.web.app/',
+    githubLink: 'https://github.com/Mehedi107/A12-client',
+    challenges: 'Integrating Stripe payment method',
+    improvements: 'Integrate SSL commerce',
   },
   {
     name: 'Artifact Vault',
     image: p1,
     description:
-      'A web app for tracking historical artifacts with user contributions and interactive engagement.',
-    techStack: ['React', 'Firebase', 'Express.js', 'MongoDB'],
-    liveLink: 'https://artifactvault.live',
-    githubLink: 'https://github.com/yourusername/artifactvault-client',
-    detailsPage: '/projects/artifactvault',
+      'Artifact Vault is a web application designed for tracking and showcasing historical artifacts such as the Rosetta Stone and Antikythera Mechanism. Users can browse artifacts, view detailed information, and contribute by adding their own entries. The platform also allows users to like artifacts and keep track of their contributions. The application',
+    techStack: [
+      'tailwind',
+      'React',
+      'Firebase',
+      'Express.js',
+      'MongoDB',
+      'Node.js',
+    ],
+    liveLink: 'https://artifact-vault-916d6.web.app/',
+    githubLink: 'https://github.com/Mehedi107/A11-client',
+    challenges: 'Integrating JWT, Axios and TanStack query',
+    improvements: 'Integrate Payment Method',
   },
   {
-    name: 'Vocabulary Builder',
+    name: 'VizaFlow',
     image: p2,
     description:
-      'An interactive language learning app for improving vocabulary retention.',
-    techStack: ['React', 'Firebase', 'Speech API', 'TailwindCSS'],
-    liveLink: 'https://vocabuilder.live',
-    githubLink: 'https://github.com/yourusername/vocabuilder-client',
-    detailsPage: '/projects/vocabuilder',
+      'The Visa Navigator Portal is a comprehensive platform designed to streamline and simplify the visa application process. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), this portal offers a user-friendly experience for applicants, agents, and administrators.',
+    techStack: [
+      'React',
+      'Firebase',
+      'Express.js',
+      'MongoDB',
+      'Node.js',
+      'tailwind',
+    ],
+    liveLink: 'https://visaflow-400fc.web.app/',
+    githubLink: 'https://github.com/Mehedi107/Visa-Flow',
+    challenges: 'Integrating JWT and Axios',
+    improvements: 'Integrate TanStack query',
   },
 ];
 
@@ -76,32 +94,32 @@ const ProjectDetailsPage = () => {
         </div>
 
         <div className="mt-6 flex gap-6">
-          <a
-            href={project.liveLink}
+          <Link
+            to={project.liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-blue-400 hover:text-blue-300"
+            className="flex items-center gap-2 text-zinc-800 underline underline-offset-4"
           >
-            <FaExternalLinkAlt /> Live Demo
-          </a>
-          <a
-            href={project.githubLink}
+            <HiOutlineExternalLink /> Live Demo
+          </Link>
+          <Link
+            to={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-400 hover:text-white"
+            className="flex items-center gap-2 hover:underline underline-offset-4"
           >
             <FaGithub /> GitHub
-          </a>
+          </Link>
         </div>
 
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Challenges Faced</h3>
-          <p className="text-gray-300">{project.challenges}</p>
+          <p className="text-zinc-600">{project.challenges}</p>
         </div>
 
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Future Improvements</h3>
-          <p className="text-gray-300">{project.improvements}</p>
+          <p className="text-zinc-600">{project.improvements}</p>
         </div>
       </div>
     </section>

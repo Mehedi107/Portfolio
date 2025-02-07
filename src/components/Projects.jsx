@@ -13,9 +13,8 @@ const projects = [
     description:
       'A Product Hunt-style platform for discovering and launching new products.',
     techStack: ['React', 'Node.js', 'MongoDB', 'TailwindCSS'],
-    liveLink: 'https://prodvent.live',
-    githubLink: 'https://github.com/yourusername/prodvent-client',
-    detailsPage: '/projects/prodvent',
+    liveLink: 'https://prodvent-5cd36.web.app/',
+    githubLink: 'https://github.com/Mehedi107/A12-client',
   },
   {
     name: 'Artifact Vault',
@@ -23,19 +22,17 @@ const projects = [
     description:
       'A web app for tracking historical artifacts with user contributions and interactive engagement.',
     techStack: ['React', 'Firebase', 'Express.js', 'MongoDB'],
-    liveLink: 'https://artifactvault.live',
-    githubLink: 'https://github.com/yourusername/artifactvault-client',
-    detailsPage: '/projects/artifactvault',
+    liveLink: 'https://artifact-vault-916d6.web.app',
+    githubLink: 'https://github.com/Mehedi107/A11-client',
   },
   {
-    name: 'Vocabulary Builder',
+    name: 'VizaFlow',
     image: p2,
     description:
       'An interactive language learning app for improving vocabulary retention.',
     techStack: ['React', 'Firebase', 'Speech API', 'TailwindCSS'],
-    liveLink: 'https://vocabuilder.live',
-    githubLink: 'https://github.com/yourusername/vocabuilder-client',
-    detailsPage: '/projects/vocabuilder',
+    liveLink: 'https://visaflow-400fc.web.app/',
+    githubLink: 'https://github.com/Mehedi107/Visa-Flow',
   },
 ];
 
@@ -77,22 +74,22 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex items-center justify-between my-5">
-                <a
-                  href={project.liveLink}
+                <Link
+                  to={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-zinc-800 underline underline-offset-4"
                 >
                   <HiOutlineExternalLink /> Live Demo
-                </a>
-                <a
-                  href={project.githubLink}
+                </Link>
+                <Link
+                  to={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:underline underline-offset-4"
                 >
                   <FaGithub /> GitHub
-                </a>
+                </Link>
               </div>
               <Link
                 to={`project/${project.name}`}
