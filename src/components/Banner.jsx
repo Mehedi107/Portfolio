@@ -43,11 +43,11 @@ const Banner = () => {
             </a>
           </div>
           {/* CTA Buttons */}
-          <div className="flex items-center gap-5 mt-8 justify-center md:justify-start">
-            <button className="btn md:btn-lg bg-zinc-700 text-white ">
+          <div className="flex items-center gap-5 mt-10 justify-center md:justify-start">
+            <button className="btn md:p-8 md:btn-lg rounded-full bg-zinc-700 text-white ">
               Let&apos;s talk
             </button>
-            <a className="btn md:btn-lg flex justify-center items-center bg-lime-400">
+            <a className="btn md:btn-lg flex justify-center items-center bg-lime-400 rounded-full md:p-8">
               <span>
                 <FiDownload />
               </span>

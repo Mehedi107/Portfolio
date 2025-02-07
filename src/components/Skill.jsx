@@ -13,7 +13,7 @@ const Skill = () => {
   return (
     <section>
       <div className="container mx-auto py-28">
-        <Marquee gradient={true}>
+        <Marquee gradient={true} gradientColor={'#f4f4f5'}>
           <img
             className="w-24 h-24 object-contain mx-10 grayscale"
             src={htmlLogo}

@@ -61,7 +61,7 @@ const Navbar = () => {
       </div>
       {/* End */}
       <div className="navbar-end">
-        <a className="btn md:btn-lg flex justify-center items-center bg-lime-400">
+        <a className="btn md:btn-lg rounded-full flex justify-center items-center bg-lime-400">
           <span>
             <FiDownload />
           </span>
