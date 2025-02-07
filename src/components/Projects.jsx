@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import p1 from '../assets/artifact.png';
 import p2 from '../assets/vocabhero.png';
 import p3 from '../assets/prodvent.png';
+import { HiOutlineExternalLink } from 'react-icons/hi';
+import { Link } from 'react-router';
 
 const projects = [
   {
@@ -42,7 +44,7 @@ export default function Projects() {
     <section className="py-24">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">My Projects</h2>
-        <p className="text-gray-400 mb-10 text-lg">
+        <p className="mb-16 text-lg">
           A showcase of my latest work and technical expertise.
         </p>
       </div>
@@ -50,7 +52,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="  rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 border border-zinc-300"
+            className="project-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-zinc-300 "
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -64,37 +66,40 @@ export default function Projects() {
             <div className="p-6 bg-zinc-300">
               <h3 className="text-2xl font-semibold">{project.name}</h3>
               <p className=" my-2">{project.description}</p>
-              <div className="flex flex-wrap gap-2 my-3">
+              <div className="flex flex-wrap gap-2 my-5">
                 {project.techStack.map((tech, i) => (
-                  <span key={i} className="text-sm  px-3 py-1 rounded-full">
+                  <span
+                    key={i}
+                    className="text-sm badge px-3 py-1 rounded-full"
+                  >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex items-center justify-between mt-4">
+              <div className="flex items-center justify-between my-5">
                 <a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300"
+                  className="flex items-center gap-2 text-zinc-800 underline underline-offset-4"
                 >
-                  <FaExternalLinkAlt /> Live Demo
+                  <HiOutlineExternalLink /> Live Demo
                 </a>
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white"
+                  className="flex items-center gap-2 hover:underline underline-offset-4"
                 >
                   <FaGithub /> GitHub
                 </a>
               </div>
-              <a
-                href={project.detailsPage}
-                className="block text-center mt-4 bg-zinc-800 text-zinc-50 py-2 rounded-lg transition duration-300"
+              <Link
+                to={`project/${project.name}`}
+                className="block text-center mt-4 bg-lime-400 py-2 rounded-lg transition duration-300"
               >
-                View More / Details
-              </a>
+                View More
+              </Link>
             </div>
           </motion.div>
         ))}

@@ -13,3 +13,7 @@ body {
 h2 {
   @apply text-3xl text-center md:text-4xl font-bold mb-6;
 }
+
+.project-card:hover img {
+  @apply grayscale-0;
+}
