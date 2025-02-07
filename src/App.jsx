@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './App.css';
 import About from './components/About';
 import Banner from './components/Banner';
@@ -10,16 +11,30 @@ import Skill from './components/Skill';
 import Skills from './components/Skills';
 
 function App() {
+  const aboutRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <>
-      <Navbar />
+      <Navbar
+        scrollToSection={section =>
+          section.current?.scrollIntoView({ behavior: 'smooth' })
+        }
+        refs={{ aboutRef, projectRef, contactRef }}
+      />
       <Banner />
       <Skill />
-      <About />
+      <div ref={aboutRef}>
+        <About />
+      </div>
       <Skills />
       <Education />
-      <Projects />
-      <Contact />
+      <div ref={projectRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
       <Footer />
     </>
   );

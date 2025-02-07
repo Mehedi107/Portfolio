@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
-    <section className="flex flex-col justify-center items-center py-24 bg-zinc-200 rounded-t-[50px] md:rounded-t-[100px] lg:rounded-t-[150px] rounded-b-[50px] md:rounded-b-[100px] lg:rounded-b-[150px]">
+    <section className="flex flex-col justify-center items-center py-24 bg-zinc-200 rounded-section">
       <div className="container mx-auto px-4 md:px-6">
         <motion.h2
           className=" text-center"
@@ -17,8 +17,8 @@ export default function Contact() {
           Feel free to reach out via email, phone, or WhatsApp.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
-          <div className="mt-8 md:text-lg flex flex-col items-center gap-3">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+          <div className="mt-8 md:text-lg flex flex-col items-center w-full md:w-1/2 gap-3">
             <motion.div
               className="flex items-center gap-3 p-4 rounded-lg bg-zinc-300 max-w-96 w-full"
               initial={{ opacity: 0, x: -30 }}
@@ -51,7 +51,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="mt-10 rounded-lg w-full">
+          <div className="mt-10 rounded-lg w-full md:w-1/2">
             <motion.h3
               className="text-2xl font-semibold text-center"
               initial={{ opacity: 0, y: -20 }}
@@ -61,22 +61,34 @@ export default function Contact() {
               Send Me a Message
             </motion.h3>
 
-            <form className="mt-4 space-y-4">
+            <form
+              action="https://formsubmit.co/2e108d1d4e2e90b6edbc540f21b005f7"
+              method="POST"
+              className="mt-4 space-y-4 w-full max-w-xl"
+            >
               <input
                 type="text"
                 placeholder="Your Name"
                 className="w-full p-3 px-5 rounded-xl  border-zinc-400/50 focus:outline-none"
+                required
+                name="name"
               />
               <input
                 type="email"
                 placeholder="Your Email"
                 className="w-full p-3 px-5 rounded-xl  border-zinc-400/50 focus:outline-none"
+                required
+                name="email"
               />
+
               <textarea
                 rows="4"
                 placeholder="Your Message"
                 className="w-full p-3 px-5 rounded-xl  border-zinc-400/50 focus:outline-none"
+                required
+                name="message"
               />
+
               <button
                 type="submit"
                 className="btn btn-block md:btn-lg bg-lime-400 rounded-xl py-5"

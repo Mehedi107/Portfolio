@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const MobileNavigation = ({ navLinks }) => {
   return (
-    <div className="drawer md:hidden drawer-end place-content-end">
+    <div className="drawer md:hidden drawer-end place-content-end z-10">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         <label

@@ -1,21 +1,23 @@
 import { FiDownload } from 'react-icons/fi';
 import logo from '../assets/logo.png';
 import MobileNavigation from './MobileNavigation';
+import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection, refs }) => {
   const navLinks = (
     <>
       <li>
-        <a>Home</a>
+        <Link>Home</Link>
       </li>
       <li>
-        <a>About</a>
+        <Link onClick={() => scrollToSection(refs.aboutRef)}>About</Link>
       </li>
       <li>
-        <a>Project</a>
+        <Link onClick={() => scrollToSection(refs.projectRef)}>Project</Link>
       </li>
       <li>
-        <a>Contact</a>
+        <Link onClick={() => scrollToSection(refs.contactRef)}>Contact</Link>
       </li>
     </>
   );
@@ -48,6 +50,13 @@ const Navbar = () => {
       </div>
     </div>
   );
+};
+
+MobileNavigation.propTypes = {
+  scrollToSection: PropTypes.func,
+  refs: PropTypes.node,
+  // navLinks: PropTypes.node,
+  // navLinks: PropTypes.node,
 };
 
 export default Navbar;

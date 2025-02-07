@@ -5,7 +5,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Banner = () => {
   return (
-    <section className="bg-zinc-200 rounded-b-[50px] md:rounded-b-[100px] lg:rounded-b-[150px] py-10 md:py-0">
+    <section className="bg-zinc-200 rounded-b-[25px] sm:rounded-b-[50px] md:rounded-b-[100px] lg:rounded-b-[150px] py-10 md:py-0">
       <div className="container mx-auto grid grid-col-1 md:grid-cols-2 gap-10 items-center lg:px-16 md:8 px-4 min-h-screen">
         {/* Banner Content */}
         <div className="col-span-1 md:justify-self-center">
@@ -57,8 +57,12 @@ const Banner = () => {
         </div>
         {/* Banner Img */}
         <div className="col-span-1 justify-self-center ">
-          <div className="bg-zinc-50 rounded-full shadow-2xl overflow-hidden">
-            <img className="max-h-96 w-full object-cover" src={mehedi} alt="" />
+          <div className="bg-zinc-200 rounded-full shadow-2xl overflow-hidden">
+            <img
+              className="max-h-96 w-full object-cover grayscale hover:grayscale-0 transition"
+              src={mehedi}
+              alt=""
+            />
           </div>
         </div>
       </div>

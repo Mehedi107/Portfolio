@@ -17,3 +17,7 @@ h2 {
 .project-card:hover img {
   @apply grayscale-0;
 }
+
+.rounded-section {
+  @apply rounded-[25px] sm:rounded-[50px] md:rounded-[100px] lg:rounded-[150px];
+}
