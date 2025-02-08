@@ -2,6 +2,7 @@ import { FiDownload } from 'react-icons/fi';
 import mehedi from '../assets/mehedi.webp';
 import { FaFacebookF, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 const Banner = () => {
   return (
@@ -56,7 +57,11 @@ const Banner = () => {
           </div>
         </div>
         {/* Banner Img */}
-        <div className="col-span-1 justify-self-center ">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1, transition: { duration: 1 } }}
+          className="col-span-1 justify-self-center "
+        >
           <div className="bg-zinc-200 rounded-full shadow-2xl overflow-hidden">
             <img
               className="max-h-96 w-full object-cover grayscale hover:grayscale-0 transition"
@@ -64,7 +69,7 @@ const Banner = () => {
               alt=""
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
