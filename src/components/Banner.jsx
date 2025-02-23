@@ -45,15 +45,23 @@ const Banner = () => {
           </div>
           {/* CTA Buttons */}
           <div className="flex items-center gap-5 mt-10 justify-center md:justify-start">
-            <button className="btn md:p-8 md:btn-lg rounded-full bg-zinc-700 text-white ">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="font-medium btn md:btn-lg rounded-full bg-zinc-700 text-white "
+            >
               Let&apos;s talk
-            </button>
-            <a className="btn md:btn-lg flex justify-center items-center bg-lime-400 rounded-full md:p-8">
+            </motion.button>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="btn md:btn-lg flex justify-center items-center bg-lime-400 rounded-full font-medium"
+            >
               <span>
                 <FiDownload />
               </span>
               <span>Resume</span>
-            </a>
+            </motion.a>
           </div>
         </div>
         {/* Banner Img */}

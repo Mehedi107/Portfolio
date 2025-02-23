@@ -1,8 +1,30 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website built with React, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## 🌟 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live Site](mehedi-pfolio.surge.sh) <!-- Replace with your actual deployed site URL -->
+
+## ✨ Features
+
+- Clean and modern UI design
+- Fully responsive layout
+- Smooth animations using Framer Motion
+- Contact form integration
+- Interactive project showcase
+- Dark/Light mode toggle
+- Performance optimized
+
+## 🛠️ Built With
+
+- React.js
+- Tailwind CSS
+- Framer Motion
+- DaisyUI
+- React Icons
+- FormSubmit
+
+## 🚀 Getting Started
+
+1. Clone the repository
