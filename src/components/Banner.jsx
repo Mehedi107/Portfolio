@@ -71,11 +71,7 @@ const Banner = () => {
           className="col-span-1 justify-self-center "
         >
           <div className="bg-zinc-200 rounded-full shadow-2xl overflow-hidden">
-            <img
-              className="max-h-96 w-full object-cover grayscale hover:grayscale-0 transition"
-              src={mehedi}
-              alt=""
-            />
+            <img className="max-h-96 w-full object-cover" src={mehedi} alt="" />
           </div>
         </motion.div>
       </div>
