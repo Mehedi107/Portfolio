@@ -8,8 +8,9 @@ export default function Contact() {
         <motion.h2
           className=" text-center"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >
           Get in Touch
         </motion.h2>
@@ -20,43 +21,47 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-5">
           <div className="mt-8 md:text-lg flex flex-col items-center w-full md:w-1/2 gap-3">
             <motion.div
-              className="flex items-center gap-3 p-4 rounded-lg bg-zinc-300 max-w-96 w-full"
+              className="flex items-center gap-3 p-4 rounded-xl bg-zinc-300 max-w-96 w-full hover:-translate-y-1 duration-200 hover:shadow-lg"
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
             >
-              <FaEnvelope className="text-blue-400 text-xl " />
+              <FaEnvelope className="text-xl " />
               <span>mehedi.hsn.dev@gmail.com</span>
             </motion.div>
 
             <motion.div
-              className="flex items-center gap-3 p-4 rounded-lg bg-zinc-300 max-w-96 w-full"
+              className="flex items-center gap-3 p-4 rounded-xl bg-zinc-300 max-w-96 w-full hover:-translate-y-1 duration-200 hover:shadow-lg"
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
             >
-              <FaPhone className="text-green-400 text-xl " />
-              <span>+880 1234-567890</span>
+              <FaPhone className="text-xl " />
+              <span>+880 1515657013</span>
             </motion.div>
 
             <motion.div
-              className="flex items-center gap-3 p-4 rounded-lg bg-zinc-300  max-w-96 w-full"
+              className="flex items-center gap-3 p-4 rounded-xl bg-zinc-300  max-w-96 w-full hover:-translate-y-1 duration-200 hover:shadow-lg"
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
             >
-              <FaWhatsapp className="text-green-500 text-xl" />
-              <span>+880 1234-567890</span>
+              <FaWhatsapp className="text-xl" />
+              <span>+880 1515657013</span>
             </motion.div>
           </div>
 
           {/* Contact Form */}
           <div className="mt-10 rounded-lg w-full md:w-1/2">
             <motion.h3
-              className="text-2xl font-semibold text-center"
+              className="text-2xl font-semibold text-center max-w-xl"
               initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
+              viewport={{ once: true }}
             >
               Send Me a Message
             </motion.h3>
