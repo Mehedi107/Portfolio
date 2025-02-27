@@ -4,7 +4,7 @@ A modern and responsive portfolio website built with React, Tailwind CSS, and Fr
 
 ## 🌟 Live Demo
 
-[View Live Site](mehedi-pfolio.surge.sh) <!-- Replace with your actual deployed site URL -->
+[View Live Site](www.mehedi-pfolio.surge.sh) <!-- Replace with your actual deployed site URL -->
 
 ## ✨ Features
 
