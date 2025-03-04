@@ -1,9 +1,7 @@
 import { FiDownload } from 'react-icons/fi';
-import logo from '../assets/logo.png';
 import MobileNavigation from './MobileNavigation';
 import { Link } from 'react-router';
 import PropTypes from 'prop-types';
-import { closeMobileNav } from '../utils/CloseMobileNav';
 
 const Navbar = ({ scrollToSection, refs }) => {
   const navLinks = (
@@ -27,7 +25,6 @@ const Navbar = ({ scrollToSection, refs }) => {
       {/* Start */}
       <div className="navbar-start">
         <a className="w-12">
-          {/* <img src={logo} alt="logo" /> */}
           <span className="inline-block font-medium text-5xl">
             m<span className="text-lime-400">.</span>
           </span>
@@ -60,10 +57,8 @@ const Navbar = ({ scrollToSection, refs }) => {
 };
 
 MobileNavigation.propTypes = {
-  scrollToSection: PropTypes.func,
+  scrollToSection: PropTypes.node,
   refs: PropTypes.node,
-  // navLinks: PropTypes.node,
-  // navLinks: PropTypes.node,
 };
 
 export default Navbar;
