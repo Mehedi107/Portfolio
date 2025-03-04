@@ -24,7 +24,12 @@ function App() {
         }
         refs={{ aboutRef, projectRef, contactRef }}
       />
-      <Banner />
+      <Banner
+        scrollToSection={section =>
+          section.current?.scrollIntoView({ behavior: 'smooth' })
+        }
+        refs={{ contactRef }}
+      />
       <Skill />
       <div ref={aboutRef}>
         <About />

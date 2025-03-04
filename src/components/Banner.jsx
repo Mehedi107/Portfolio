@@ -4,7 +4,7 @@ import { FaFacebookF, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
-const Banner = () => {
+const Banner = ({ scrollToSection, refs }) => {
   return (
     <section className="bg-zinc-200 rounded-b-[25px] sm:rounded-b-[50px] md:rounded-b-[100px] lg:rounded-b-[150px] py-10 md:py-0">
       <div className="container mx-auto grid grid-col-1 md:grid-cols-2 gap-10 items-center lg:px-16 md:8 px-4 min-h-screen">
@@ -46,6 +46,7 @@ const Banner = () => {
           {/* CTA Buttons */}
           <div className="flex items-center gap-5 mt-10 justify-center md:justify-start">
             <motion.button
+              onClick={() => scrollToSection(refs.contactRef)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="font-medium btn md:btn-lg rounded-full bg-zinc-700 text-white "
@@ -53,6 +54,7 @@ const Banner = () => {
               Let&apos;s talk
             </motion.button>
             <motion.a
+              href="https://drive.google.com/uc?export=download&id=14q4w1IBRXpYODygmm006Vwmw6_-UfmcE"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="btn md:btn-lg flex justify-center items-center bg-lime-400 rounded-full font-medium"

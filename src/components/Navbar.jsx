@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import MobileNavigation from './MobileNavigation';
 import { Link } from 'react-router';
 import PropTypes from 'prop-types';
+import { closeMobileNav } from '../utils/CloseMobileNav';
 
 const Navbar = ({ scrollToSection, refs }) => {
   const navLinks = (
@@ -11,7 +12,7 @@ const Navbar = ({ scrollToSection, refs }) => {
         <Link>Home</Link>
       </li>
       <li>
-        <Link onClick={() => scrollToSection(refs.aboutRef)}>About</Link>
+        <Link onClick={scrollToSection(refs.aboutRef)}>About</Link>
       </li>
       <li>
         <Link onClick={() => scrollToSection(refs.projectRef)}>Project</Link>
@@ -38,7 +39,10 @@ const Navbar = ({ scrollToSection, refs }) => {
       {/* End */}
       <div className="navbar-end">
         <div className="hidden md:block">
-          <a className=" btn md:btn-lg rounded-full flex justify-center items-center bg-lime-400">
+          <a
+            href="https://drive.google.com/uc?export=download&id=14q4w1IBRXpYODygmm006Vwmw6_-UfmcE"
+            className=" btn md:btn-lg rounded-full flex justify-center items-center bg-lime-400"
+          >
             <span>
               <FiDownload />
             </span>
